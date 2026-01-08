@@ -6,10 +6,10 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode:["class"],
+  darkMode: ["class"],
   theme: {
     extend: {
-      fontFamily:{
+      fontFamily: {
         Poppins: ["var(--font-Poppins)"],
         Josefin: ["var(--font-Josefin)"],
       },
@@ -18,7 +18,7 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-      screens:{
+      screens: {
         "1000px": "1000px",
         "1100px": "1100px",
         "1200px": "1200px",
@@ -26,7 +26,21 @@ const config: Config = {
         "1500px": "1500px",
         "800px": "800px",
         "400px": "400px",
-      }
+      },
+      animation: {
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+      },
     },
   },
   plugins: [],

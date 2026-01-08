@@ -1,140 +1,99 @@
 import Link from 'next/link'
 import React from 'react'
+import { Youtube, Instagram, Github, Mail, MapPin, Phone } from 'lucide-react'
 
-type Props = {}
-
-const Footer = (props: Props) => {
+const Footer = () => {
   return (
-    <footer>
-      <div className="border border-[#0000000e] dark:border-[#ffffff1e]" />
-      <br />
-      <div className="w-[95%] 800px:w-full 800px:max-w-[85%] mx-auto px-2 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
-          <div className="space-y-3">
-            <h3 className="text-[20px] font-[600] text-black dark:text-white">About</h3>
-            <ul className="space-y-4">
-              <li>
-                <Link
-                  href="/about"
-                  className="text-base text-black dark:text-gray-300 dark:hover:text-white"
-                >
-                  Our Story
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/policy"
-                  className="text-base text-black dark:text-gray-300 dark:hover:text-white"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms"
-                  className="text-base text-black dark:text-gray-300 dark:hover:text-white"
-                >
-                  Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/refund"
-                  className="text-base text-black dark:text-gray-300 dark:hover:text-white"
-                >
-                  Refund Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-base text-black dark:text-gray-300 dark:hover:text-white"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="space-y-3">
-            <h3 className="text-[20px] font-[600] text-black dark:text-white">Quick Links</h3>
-            <ul className="space-y-4">
-              <li>
-                <Link
-                  href="/courses"
-                  className="text-base text-black dark:text-gray-300 dark:hover:text-white"
-                >
-                  Courses
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/profile"
-                  className="text-base text-black dark:text-gray-300 dark:hover:text-white"
-                >
-                  My Account
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/course-dashboard"
-                  className="text-base text-black dark:text-gray-300 dark:hover:text-white"
-                >
-                  Course Dashboard
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="space-y-3">
-            <h3 className="text-[20px] font-[600] text-black dark:text-white">Social Links</h3>
-            <ul className="space-y-4">
-              <li>
-                <Link
-                  href="https://www.youtube.com/channel/UCHz6Sne9splmvm-q2w1_HWQ"
-                  className="text-base text-black dark:text-gray-300 dark:hover:text-white"
-                >
-                  Youtube
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://www.instagram.com/shahriar_sajeeb_/"
-                  className="text-base text-black dark:text-gray-300 dark:hover:text-white"
-                >
-                  Instagram
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://www.github.com/shahriarsajeeb"
-                  className="text-base text-black dark:text-gray-300 dark:hover:text-white"
-                >
-                  github
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-[20px] font-[600] text-black dark:text-white pb-3">Contact Info</h3>
-            <p className="text-base text-black dark:text-gray-300 dark:hover:text-white pb-2">
-              📞 Call Us: <a href="tel:+919515595970" className="hover:text-blue-500">+91 9515595970</a>
-            </p>
-         
-            <p className="text-base text-black dark:text-gray-300 dark:hover:text-white pb-2">
-              📧 Email: <a href="mailto:support@bbedits.in" className="hover:text-blue-500">support@bbedits.in</a>
-            </p>
+    <footer className="bg-[#030014] border-t border-purple-500/10 pt-16 pb-8 text-gray-300">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
 
-            <p className="text-base text-black dark:text-gray-300 dark:hover:text-white pb-2">
-              📍 Vizag, India
+          {/* Brand & Description */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+              BBEdits
+            </h3>
+            <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
+              Empowering creators with AI-driven tools and professional video editing resources. Join the future of content creation.
             </p>
-            
+            <div className="flex gap-4 pt-4">
+              <Link href="https://www.youtube.com/channel/UCHz6Sne9splmvm-q2w1_HWQ" target="_blank" className="p-2 rounded-full bg-white/5 hover:bg-purple-600/20 hover:text-purple-400 transition-all duration-300">
+                <Youtube className="w-5 h-5" />
+              </Link>
+              <Link href="https://www.instagram.com/shahriar_sajeeb_/" target="_blank" className="p-2 rounded-full bg-white/5 hover:bg-purple-600/20 hover:text-purple-400 transition-all duration-300">
+                <Instagram className="w-5 h-5" />
+              </Link>
+              <Link href="https://www.github.com/shahriarsajeeb" target="_blank" className="p-2 rounded-full bg-white/5 hover:bg-purple-600/20 hover:text-purple-400 transition-all duration-300">
+                <Github className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-6">Explore</h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="/courses" className="hover:text-purple-400 transition-colors">Courses</Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-purple-400 transition-colors">About Us</Link>
+              </li>
+              <li>
+                <Link href="/policy" className="hover:text-purple-400 transition-colors">Privacy Policy</Link>
+              </li>
+              <li>
+                <Link href="/faq" className="hover:text-purple-400 transition-colors">FAQ</Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-6">Contact</h4>
+            <ul className="space-y-4 text-sm">
+              <li className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-purple-500 mt-0.5" />
+                <span>Vizag, India</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-purple-500" />
+                <a href="mailto:support@bbedits.in" className="hover:text-purple-400 transition-colors">support@bbedits.in</a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-purple-500" />
+                <a href="tel:+919515595970" className="hover:text-purple-400 transition-colors">+91 9515595970</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Newsletter (Visual Only) */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-6">Stay Updated</h4>
+            <p className="text-sm text-gray-400 mb-4">Subscribe to our newsletter for the latest AI tools and editing tips.</p>
+            <form className="flex flex-col gap-3">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder:text-gray-600"
+              />
+              <button type="submit" className="bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium py-2.5 rounded-lg transition-colors">
+                Subscribe
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-white/10 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+          <p>© {new Date().getFullYear()} BBEdits. All rights reserved.</p>
+          <div className="flex gap-6">
+            <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
+            <Link href="/policy" className="hover:text-white transition-colors">Privacy</Link>
           </div>
         </div>
-        <br />
-        <p className="text-center text-black dark:text-white">
-          Copyright © {new Date().getFullYear()} BBEdits | All Rights Reserved
-        </p>
       </div>
-      <br />
     </footer>
   )
 }
